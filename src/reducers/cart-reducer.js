@@ -3,7 +3,6 @@ import { ADD_TO_CART, REMOVE_FROM_CART } from '../actions/cart-actions';
 const initialState = { cartItems: [] };
 
 const cartReducer = function (state = initialState, action) {
-    console.log(action, ' cart action')
     switch (action.type) {
         case ADD_TO_CART:
             let index = state.cartItems.findIndex(x => x.bookId === action.payload.bookId);

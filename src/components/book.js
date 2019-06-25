@@ -1,5 +1,6 @@
 import React from 'react';
-import './book.css'
+import './book.css';
+import PropTypes from 'prop-types';
 
 export default function Book(props) {
     return (
@@ -13,4 +14,13 @@ export default function Book(props) {
             </div>
         </div>
     )
+}
+
+Book.propTypes = {
+    book: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+        price: PropTypes.number.isRequired,
+    }),
+    addToCart: PropTypes.func
 }

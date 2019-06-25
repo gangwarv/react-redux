@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Navbar(props) {
-    console.log('nav logged', props.cart)
     return (
         <nav className="navbar navbar-default">
             <div className="container container-fluid">

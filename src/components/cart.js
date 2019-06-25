@@ -23,7 +23,6 @@ export default function Cart(props) {
                             <td><input type="button" onClick={_ => props.removeFromCart({ bookId: item._id })} value="x" /></td>
                         </tr>))}
                     </tbody>
-
                 </table>
             </div>
         </div>

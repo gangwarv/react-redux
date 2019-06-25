@@ -2,7 +2,6 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import allReducers from './reducers';
 
 const myLogger = (store) => (next) => (action) => {
-    console.log(action.type + ': action performed');
     next(action);
 }
 
