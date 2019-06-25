@@ -5,7 +5,8 @@ import { addToCart } from '../actions/cart-actions';
 
 const mapStateToProps = (state) => {
     return {
-        books: state.booksReducer.books
+        books: state.booksReducer.books,
+        isLoading: state.loading.isLoading
     };
 }
 const mapDispatchToProps = (dispatch) => {

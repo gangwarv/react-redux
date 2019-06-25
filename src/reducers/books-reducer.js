@@ -4,9 +4,11 @@ import { ADD_ALL_BOOKS, ADD_BOOK, ADD_STOCK, addAllBooks, addBook, addStock } fr
 const initialState = {
     books: []
 }
-const booksReducer =function (state=initialState, action) {
+const booksReducer = function (state = initialState, action) {
     switch (action.type) {
         case ADD_ALL_BOOKS:
+            return Object.assign({}, state, { books: action.payload });
+        case `${ADD_ALL_BOOKS}_FULFILLED`:
             return Object.assign({}, state, { books: action.payload });
         case ADD_BOOK:
             return Object.assign({}, state, { books: [state.books, action.payload] });
@@ -18,7 +20,7 @@ const booksReducer =function (state=initialState, action) {
                     }
                 })
             });
-        default: return {...state};
+        default: return { ...state };
     }
 }
 
